@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "UBC-Rocket Dynamic Simulator", "UBC-Rocket Dynamic Simulator.pyproj", "{8A149129-EA41-4D5B-B650-D6418ADC589D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8A149129-EA41-4D5B-B650-D6418ADC589D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A149129-EA41-4D5B-B650-D6418ADC589D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {81802FFE-2054-4FEF-A8D2-55119CCCDA76}
+	EndGlobalSection
+EndGlobal
