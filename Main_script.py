@@ -1,3 +1,7 @@
+# Label code, initialize all class attributes, extract solution
+
+import os
+from copy import deepcopy
 import numpy as np
 import Classes
 from Functions import RocketDynModel
@@ -16,6 +20,19 @@ StateVecInit= np.hstack((
 
 sol = solve_ivp(RocketDynModel,[0,Sim.SimTime],StateVecInit,args=(Global,Rocket),t_eval=np.arange(0,Sim.SimTime + Sim.TimeStepSize,Sim.TimeStepSize))
 
-plt.figure()
-plt.plot(sol.t,sol.y[2,:])
-plt.show()
+# Extract solution
+TimeStep = []
+for TimeStepNum in range(Sim.NumTimeSteps):
+    Time = sol.t[TimeStepNum]
+    StateVec = sol.y[:,TimeStepNum]
+    RocketDynModel(Time,StateVec,Global,Rocket)
+    TimeStep.append(Classes.TimeSeriesData(Time,deepcopy(Global),deepcopy(Rocket)))
+    pass
+
+for TimeStepNum in range(Sim.NumTimeSteps):
+    print(TimeStep[TimeStepNum].Rocket.PosVec)
+    pass
+
+#plt.figure()
+#plt.plot(Sim.TimeStepVec,Rocket.PosVecTraj[2,:])
+#plt.show()

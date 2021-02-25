@@ -73,3 +73,11 @@ class RocketProperties:
         self.AngVelVec_B = np.zeros(3)
         pass
     pass
+
+class TimeSeriesData:
+    def __init__(self,Time,Global,Rocket):
+        self.Time = Time
+        self.Global = Global
+        self.Rocket = Rocket
+        pass
+    pass
